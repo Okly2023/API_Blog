@@ -4,6 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use App\Controllers\PostController;
 use App\Controllers\AuthorController;
+use App\Controllers\CategorieController;
 
 $uri = $_SERVER['REQUEST_URI']; // return string
 
@@ -44,7 +45,23 @@ switch($url['path']) {
                 break;
          case '/addAuthor':
                 (new AuthorController())->addauthor();
-                break;       
+                break; 
+
+         case '/categories':
+                (new CategorieController())->Categories();
+                break;
+         case '/categorie':
+                // Verify if id is set
+                if (isset($result['id'])) {
+                    $id = intval($result['id']);
+                    (new CategorieController())->Categorie($id);
+                } else {
+                    echo "ID not provided";
+                }
+                break;
+         case '/addCategorie':
+                    (new CategorieController())->addCategorie();
+                    break;                   
     default:
         echo "Invalid route";
         break;
