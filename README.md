@@ -28,9 +28,7 @@ API Blog is a simple blogging platform that exposes a RESTful API for creating, 
 1. Clone the repository: `git clone https://github.com/username/api_blog.git`
 2. Navigate into the project directory: `cd api_blog`
 3. Install dependencies: `composer install`
-4. Create a .env file and configure your database connection details.
-5. Run the database migrations: `php artisan migrate`
-6. Start the server: `php artisan serve`
+4. Start the server: `php -S localhost:8000`
 
 ##### Usage
 You can interact with the API using any HTTP client like curl, Postman, or even your browser (for GET requests). Here's an example of creating a new post using curl:
