@@ -2,6 +2,8 @@
 
 API Blog is a simple blogging platform that exposes a RESTful API for creating, reading, updating, and deleting blog posts, authors, and categories.
 
+This Restful Api is built using PHP, OOP, PDO, MVC and MSQL Database with three tables(post, Author and categorie)
+
 ## Features
 - Create, read, update, and delete blog posts.
 - Each post can have one or more categories.
